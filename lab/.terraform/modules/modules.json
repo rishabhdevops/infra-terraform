@@ -1,1 +1,1 @@
-{"Modules":[{"Source":"./global/iam","Key":"1.iam_groups;./global/iam","Version":"","Dir":".terraform/modules/7086798b9c2ad816ba3ffcc42b8e381e","Root":""}]}
+{"Modules":[{"Source":"./global/iam","Key":"1.iam_groups;./global/iam","Version":"","Dir":".terraform/modules/7086798b9c2ad816ba3ffcc42b8e381e","Root":""},{"Source":"./ap-south-1/dev","Key":"1.vpc;./ap-south-1/dev","Version":"","Dir":".terraform/modules/97a91f34d4cb48ffc32962c3dec7ed69","Root":""}]}
