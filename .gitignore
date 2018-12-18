@@ -1,2 +1,1 @@
-*.provider.tf*
-*.backend.tf*
+provider.tf
