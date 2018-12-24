@@ -14,7 +14,7 @@ resource "aws_vpc" "main" {
 
 #public subnet
 resource "aws_subnet" "public subnet" {
-vpc_id = "$(vpc.default.id}"
+vpc_id = "$(var.vpc_cidr}"
 cidr_block = "${var.public_subnet_cidr}"
 availability_zone = "${var.environment}"
 
@@ -26,7 +26,7 @@ tags {
 
 #private subnet
 resource "aws_subnet" "private subnet" {
-vpc_id = "$(vpc.default.id}"
+vpc_id = "$(var.vpc_cidr}"
 cidr_block = "${var.private_subnet_cidr}"
 availability_zone = "${var.environment}"
 
@@ -37,7 +37,7 @@ tags {
 
 #Internet Accessgateway
 resource "internet_gateway" "gw" {
-  vpc_id = "${vpc.default.id}"
+  vpc_id = "${var.vpc_cidr}"
 
   tags {
     Name = "VPC IGW"
@@ -46,7 +46,7 @@ resource "internet_gateway" "gw" {
 
 #Routetable
 resource "aws_route_table" "web-public-rt" {
-  vpc_id = "${vpc.default.id}"
+  vpc_id = "${var.vpc_cidr}"
 
   route {
     cidr_block = "0.0.0.0/0"
